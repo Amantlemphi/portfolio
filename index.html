@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/e0b46b571d.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="containter">
+            <nav>
+                
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+
+            </nav>
+            <div class="header-text">
+                <p>I'M</p>
+                <h1>AMANTLE
+                </h1>
+                <h2>A Computer Science Student</h2>
+            </div>
+
+
+        </div>
+    </div>
+    <!---------------about----------->
+
+    <div id="about">
+        <div class="containter">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/about.jpeg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About </h1>
+                    <p>Dedicated and goal-oriented student with extensive
+                        technicalskills and eager to apply program management
+                        experience towards supporting a reputable company's goals
+                        within the tech industry. Seeking an opportunity to work
+                        and grow as a computer engineer. I am skilled in dealing with a
+                        problem in a resourceful manner and negotiating to achieve
+                        beneficial agreements. I am always enthusiastic to learn and
+                        undertake new challenges.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Web Development</span><br>Designing/App Interfaces</li>
+                            <li><span>App Developmet</span><br>Building Android apps</li>
+                            <li><span>System Development</span><br>Designing and developing system</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>July 2022 - December 2023</span><br>Teacher Aide</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2017 </span><br>Materspei College</li>
+                            <li><span>2023</span><br>Naledi Training Institution</li>
+                            <li><span>Current</span><br>Botswana Accountancy College</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-----------------------portfolio----------->
+    <div id="portfolio">
+        <div class="containter">
+            <h1 class="sub-title">Latest Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/work1.jpg">
+                    <div class="layer">
+                        <h3>DeKarlo Clothing</h3>
+                        <p> This website allows you purchase clothes online.
+                            Visit the website.
+                        </p>
+
+                    </div>
+
+                </div>
+                <div class="work">
+                    <img src="images/work2.jpg">
+                    <div class="layer">
+                        <h3>Calculator</h3>
+                        <p> This simple calculator was designed as a school project.
+                        </p>
+
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work3.jpg">
+                    <div class="layer">
+                        <h3>Banking App</h3>
+                        <p> This system was designed to enable users to do various bank services.
+                        </p>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <!--------------------------contact--------->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-regular fa-paper-plane"></i>amantlemphinyane@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>26776159933</p>
+                    <div class="social-icons">
+                        <a href="https://facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+
+                    </div>
+                    <a href="images/amantle cv.pdf" download="" class="btn btn2">Download Cv</a>
+
+                </div>
+                <div class="contact-right">
+                    <form action="https://api.web3forms.com/submit" method="POST" class="contact-right">
+
+                        <input type="hidden" name="access_key" value="680b4bf5-9f87-4728-8fc6-2a2ce70430c2">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+
+                    </form>
+                    <span id="msg"></span>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © Amantle. Made in 2024 </p>
+        </div>
+
+    </div>
+
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+    </script>
+
+    <script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbzWJ8XAcsMTJGsbZVroqTEGPe__4MJKjH2qbMUkADUzK_KjlAn4OvqiGpADei9L3QTAhg/exec'
+  const form = document.forms['submit-to-google-sheet']
+  const msg = document.getElementById("msg")
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        msg.innerHTML = "Message sent successfully"
+        setTimeout(function(){
+            msg.innerHTML = ""
+        },5000)
+        form.reset()
+      })
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+<script>
+
+    var sidemenu = document.getElementById("sidemenu")
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-100px";
+    }
+
+
+
+    </script>
+</body>
+
+</html>
